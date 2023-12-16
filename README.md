@@ -1,0 +1,1 @@
+Ihr kommt in die dritte Kaste (nach unseren Schützern), wenn ihr Mathe, Programmierung und Mechanik könnt (Reperatur). Der Rest lebt bald seinen Traum. Ihr müsst euch gedulden.  Nach den ganzen Experimenten, möchte Markus Lindner einfach mal Urlaub machen in der Natur. Danach können wir wieder zusammenarbeiten 60% Regierung / 40% Gangster. 
