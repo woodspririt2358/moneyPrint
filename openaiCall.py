@@ -1,7 +1,7 @@
 import openai
 
 # Setze deine API-Schlüssel hier ein
-api_key = 'DEIN_OPENAI_API_SCHLÜSSEL'
+api_key = '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'
 openai.api_key = api_key
 
 # Deine Anfrage an die API
