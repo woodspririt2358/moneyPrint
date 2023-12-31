@@ -1,21 +1,29 @@
-import openai
+import requests
+import json
 
-# Setze deine API-Schlüssel hier ein
-api_key = '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'
-openai.api_key = api_key
+# API-Endpunkt und Zugangsschlüssel für OpenAI GPT-4
+api_url = "https://api.openai.com/v1/engines/gpt-4/completions"
+api_key = "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"
 
-# Deine Anfrage an die API
-prompt_text = "Wie kann ich dir helfen?"
+# Daten für den API-Aufruf
+data = {
+    "prompt": "Übersetze 'Hello, world!' ins Französische.",
+    "max_tokens": 60
+}
 
-# Beispielhaftes GPT-3.5 Modell
-model = "text-davinci-003"
+# Header mit dem API-Schlüssel
+headers = {
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
+}
 
-# Die Anfrage an die API senden
-response = openai.Completion.create(
-  engine=model,
-  prompt=prompt_text,
-  max_tokens=50  # Anzahl der zurückgegebenen Tokens (max. 2048)
-)
+# API-Aufruf
+response = requests.post(api_url, headers=headers, data=json.dumps(data))
 
-# Die Antwort der API als String ausgeben
-print(response.choices[0].text.strip())
+# Antwort verarbeiten
+if response.status_code == 200:
+    print("Erfolgreiche Antwort:")
+    print(response.json())
+else:
+    print("Fehler bei der Anfrage:")
+    print(response.text)
