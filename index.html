@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiaryChain</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <img src="./logo.jpg" alt="DiaryChain Logo" class="logo"/>
+        <h1 class="mb-4">DiaryChain</h1>
+
+        <div class="card p-4 mb-4">
+            <h2 class="h4">Add Entry</h2>
+            <input type="text" id="date" class="form-control mb-2" placeholder="Date (YYYY-MM-DD)">
+            <input type="text" id="time" class="form-control mb-2" placeholder="Time (HH:MM)">
+            <input type="text" id="category" class="form-control mb-2" placeholder="Category">
+            <input type="text" id="name" class="form-control mb-2" placeholder="Name">
+            <input type="text" id="description" class="form-control mb-2" placeholder="Description">
+            <div class="form-check mb-3">
+                <input type="checkbox" id="isLifeEvent" class="form-check-input">
+                <label for="isLifeEvent" class="form-check-label">Life Event</label>
+            </div>
+            <button onclick="addEntry()" class="btn btn-primary">Add Entry</button>
+        </div>
+
+        <div class="card p-4 mb-4">
+            <h2 class="h4">Get Entry</h2>
+            <input type="number" id="index" class="form-control mb-3" placeholder="Entry Index">
+            <button onclick="getEntry()" class="btn btn-secondary">Get Entry</button>
+            <p id="entryDetails" class="mt-3"></p>
+        </div>
+    </div>
+
+    <script>
+        // Ihr JavaScript-Code hier...
+    </script>
+</body>
+</html>
